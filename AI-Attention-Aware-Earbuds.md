@@ -888,7 +888,6 @@ Lower music volume
 Voice Notification
 
 "John is calling you."
-
         │
         ▼
 Enable Transparency Mode
@@ -913,11 +912,8 @@ Wait for user response
 ```
 Friend:
 "John!"
-
 ↓
-
 Earbuds:
-
 🔔 John is calling you.
 ```
 
@@ -928,11 +924,8 @@ Earbuds:
 ```
 Mother:
 "John, come here!"
-
 ↓
-
 Earbuds:
-
 🔔 Mom is calling you.
 ```
 
@@ -944,11 +937,8 @@ Earbuds:
 
 ```
 "Excuse me, John!"
-
 ↓
-
 Earbuds:
-
 🔔 Someone is calling your name.
 ```
 
@@ -1000,6 +990,7 @@ Notification:
 ```
 
 This use case extends the Human Attention Inference Engine by providing personalized, context-aware notifications instead of generic interruption alerts.
+
 ---
 
 ## Future Extensions
