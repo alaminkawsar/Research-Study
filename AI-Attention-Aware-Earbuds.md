@@ -461,35 +461,23 @@ Interrupt Audio
 
 Possible patent opportunities:
 
-## 1.
-
-Human Attention Inference
+## 1. Human Attention Inference
 
 Instead of sound recognition.
 
 ---
 
-## 2.
-
-Probability of Being Addressed
+## 2. Probability of Being Addressed
 
 Estimate:
 
 ```
-P(
-
-Speaker intends to communicate
-
-with wearer
-
-)
+P(Speaker intends to communicate with wearer)
 ```
 
 ---
 
-## 3.
-
-Context-Aware Interruption
+## 3. Context-Aware Interruption
 
 Examples
 
@@ -517,9 +505,7 @@ Ignore
 
 ---
 
-## 4.
-
-Multimodal Attention
+## 4. Multimodal Attention
 
 Combine
 
@@ -533,9 +519,7 @@ Combine
 
 ---
 
-## 5.
-
-Attention Score
+## 5. Attention Score
 
 Possible formula
 
@@ -581,9 +565,7 @@ w9 × RepeatCount
 
 ---
 
-## 6.
-
-Social Interaction Graph
+## 6. Social Interaction Graph
 
 ```
 Speaker
