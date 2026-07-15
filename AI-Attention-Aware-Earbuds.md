@@ -594,8 +594,433 @@ Attention Score
 This shifts the focus from signal processing to AI reasoning.
 
 ---
+# 9 Potential Use Cases
 
-# 9. References
+The proposed **Human Attention Inference Engine** is intended to be a general-purpose decision engine rather than a single-feature application. Below are several example use cases that demonstrate how the system could be applied in real-world scenarios.
+
+> **Note:** These are application scenarios built on top of the proposed attention inference engine and should not be considered the core invention.
+
+---
+
+## Use Case 1 — Intelligent Conversation Mode
+
+### Scenario
+
+The wearer is listening to music while wearing earbuds. Someone nearby calls the wearer's name.
+
+Instead of requiring the user to remove the earbuds, the system intelligently transitions into conversation mode.
+
+### Workflow
+
+```text
+Someone calls wearer
+        │
+        ▼
+Attention Inference Engine
+        │
+        ▼
+High Attention Score
+        │
+        ▼
+Reduce music volume
+or Pause playback
+        │
+        ▼
+Enable Transparency Mode
+        │
+        ▼
+Conversation begins
+        │
+        ▼
+Monitor conversation state
+        │
+        ▼
+Conversation finished
+        │
+        ▼
+Restore previous music
+volume and playback
+```
+
+### Possible AI Signals
+
+- User name detected
+- Speaker identified
+- Speaker direction
+- Speaker distance
+- Speech activity
+- Conversation duration
+- Silence duration
+- User response detected
+
+---
+
+## Use Case 2 — Emergency Awareness
+
+### Scenario
+
+While walking outdoors, an ambulance approaches from behind.
+
+The system detects the emergency sound, estimates its urgency, and temporarily interrupts playback.
+
+```text
+Emergency sound
+        │
+        ▼
+Urgency Estimation
+        │
+        ▼
+High Risk
+        │
+        ▼
+Pause music
+        │
+        ▼
+Voice prompt
+
+"Ambulance approaching"
+
+        │
+        ▼
+Resume playback
+```
+
+---
+
+## Use Case 3 — Family or Trusted Contact Priority
+
+### Scenario
+
+The wearer is in a crowded place.
+
+A family member calls their name.
+
+The system recognizes both the speaker and the intent to communicate.
+
+```text
+Speaker Recognition
+        │
+        ▼
+Known Family Member
+        │
+        ▼
+Attention Score
+        │
+        ▼
+Notify wearer
+```
+
+Possible priority contacts:
+
+- Parents
+- Spouse
+- Children
+- Friends
+- Manager
+- Emergency contacts
+
+---
+
+## Use Case 4 — Road Safety
+
+### Scenario
+
+The wearer is crossing a road while listening to music.
+
+A vehicle horn is detected behind the user.
+
+The AI determines that interruption is necessary.
+
+```text
+Vehicle horn
+        │
+        ▼
+Direction Estimation
+        │
+        ▼
+Danger Assessment
+        │
+        ▼
+Interrupt playback
+        │
+        ▼
+Spatial warning
+
+"Vehicle behind you."
+```
+
+---
+
+## Use Case 5 — Workplace Communication
+
+### Scenario
+
+The wearer is working in an office while listening to music.
+
+A coworker attempts to get their attention.
+
+The system detects that the communication is directed at the wearer and automatically switches into conversation mode.
+
+```text
+Coworker speaks
+        │
+        ▼
+Attention Inference
+        │
+        ▼
+Conversation Mode
+        │
+        ▼
+Automatic Resume
+```
+
+---
+
+## Use Case 6 — Smart Home Awareness
+
+### Scenario
+
+The wearer is cleaning the house while wearing earbuds.
+
+Important household events occur.
+
+Examples include:
+
+- Doorbell
+- Baby crying
+- Smoke detector
+- Glass breaking
+
+The system interrupts only when necessary.
+
+```text
+Environmental Event
+        │
+        ▼
+Priority Evaluation
+        │
+        ▼
+Important?
+      /      \
+    Yes       No
+     │
+     ▼
+Notify wearer
+```
+
+---
+
+## Use Case 7 — Conversation Lifecycle Management
+
+Rather than simply detecting speech, the AI continuously manages the complete lifecycle of a conversation.
+
+```text
+Listening
+     │
+     ▼
+Attention Requested
+     │
+     ▼
+Conversation Started
+     │
+     ▼
+Conversation Active
+     │
+     ▼
+Conversation Finished
+     │
+     ▼
+Resume Playback
+```
+
+Possible indicators for conversation completion include:
+
+- No speech detected for several seconds.
+- Speaker moves away.
+- User resumes walking or previous activity.
+- Voice activity falls below a threshold.
+- Transparency mode is no longer needed.
+---
+
+## Use Case 8 — Personalized Name Recognition Notification
+
+### Scenario
+
+The wearer is listening to music in a public place while wearing earbuds.
+
+Someone nearby calls the wearer's name.
+
+Instead of simply detecting speech, the AI recognizes that the speech is directed toward the wearer and generates a personalized notification.
+
+Example notification:
+
+```
+🔔 John is calling you.
+```
+
+or
+
+```
+🔔 Someone is calling your name.
+```
+
+### Workflow
+
+```text
+Ambient Speech
+        │
+        ▼
+Speech Recognition
+        │
+        ▼
+Name Detection
+        │
+        ▼
+Attention Inference
+        │
+        ▼
+High Confidence
+        │
+        ▼
+Lower music volume
+        │
+        ▼
+Voice Notification
+
+"John is calling you."
+
+        │
+        ▼
+Enable Transparency Mode
+        │
+        ▼
+Wait for user response
+```
+
+### Possible AI Components
+
+- Automatic Speech Recognition (ASR)
+- Keyword or Name Detection
+- Speaker Identification
+- Direction of Arrival (DoA)
+- Distance Estimation
+- Attention Inference Engine
+
+### Example Scenarios
+
+**Friend calling**
+
+```
+Friend:
+"John!"
+
+↓
+
+Earbuds:
+
+🔔 John is calling you.
+```
+
+---
+
+**Parent calling**
+
+```
+Mother:
+"John, come here!"
+
+↓
+
+Earbuds:
+
+🔔 Mom is calling you.
+```
+
+*(Requires optional speaker recognition.)*
+
+---
+
+**Unknown person**
+
+```
+"Excuse me, John!"
+
+↓
+
+Earbuds:
+
+🔔 Someone is calling your name.
+```
+
+---
+
+### Possible Notification Types
+
+- Voice prompt
+  - "John is calling you."
+
+- Audio tone followed by speech
+
+- Smartwatch vibration
+
+- Phone notification
+
+- Visual notification on AR glasses (future extension)
+
+### Potential Extension
+
+Rather than only notifying that someone called the user's name, the system may estimate **who** is calling and **how confident** it is.
+
+Example:
+
+```text
+Detected Speaker:
+Alice
+
+Confidence:
+96%
+
+Notification:
+
+🔔 Alice is calling you.
+```
+
+If the speaker cannot be identified:
+
+```text
+Detected Name:
+John
+
+Speaker:
+Unknown
+
+Notification:
+
+🔔 Someone is calling your name.
+```
+
+This use case extends the Human Attention Inference Engine by providing personalized, context-aware notifications instead of generic interruption alerts.
+---
+
+## Future Extensions
+
+The proposed attention inference engine could support additional applications, including:
+
+- Meeting assistant
+- Classroom mode
+- Cycling safety
+- Running safety
+- Airport announcements
+- Public transportation alerts
+- Elderly assistance
+- Hearing assistance
+- Industrial worker safety
+- Military communication systems
+
+These use cases illustrate the flexibility of the proposed architecture while keeping the core innovation centered on **AI-based human attention inference** rather than simple environmental sound detection.
+---
+
+# 10. References
 
 ### Google Patents
 
@@ -655,7 +1080,7 @@ This reframes the challenge as **human attention inference** rather than environ
 
 ---
 
-# 10. Improvement Areas (TODO)
+# 11. Improvement Areas (TODO)
 
 ## Content Improvements
 
