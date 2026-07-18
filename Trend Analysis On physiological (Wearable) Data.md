@@ -1136,3 +1136,421 @@ If I had to choose only **five resources** to study deeply, they would be:
 
 These five resources expose the actual research workflow used in digital health: **raw sensor data → preprocessing → physiological feature extraction → longitudinal statistical analysis → health insight or disease prediction**, rather than simply producing charts or summary statistics.
 ````7
+
+# Research-Grade Python Projects for Wearable Feature Engineering
+
+These projects expose the implementation of feature extraction, physiological biomarkers, statistical analysis, and digital health endpoints.
+
+---
+
+# 1. scikit-digital-health (Pfizer) ⭐⭐⭐⭐⭐
+
+GitHub
+
+https://github.com/pfizer-opensource/scikit-digital-health
+
+Paper
+
+https://mhealth.jmir.org/2022/4/e36762/
+
+Why read it?
+
+Probably the best open-source implementation of wearable feature extraction.
+
+Features implemented
+
+- Sleep endpoints
+- Physical activity
+- Gait
+- Sit-to-stand
+- ENMO
+- Angle metrics
+- Wear detection
+- Activity fragmentation
+- Digital biomarkers
+
+Read these folders
+
+```
+src/skdh/
+
+activity/
+
+sleep/
+
+gait/
+
+preprocessing/
+```
+
+Research level
+
+★★★★★
+
+---
+
+# 2. FLIRT (ETH Zurich) ⭐⭐⭐⭐⭐
+
+GitHub
+
+https://github.com/im-ethz/flirt
+
+Paper
+
+https://arxiv.org/abs/2107.03475
+
+Purpose
+
+Feature extraction for wearable signals.
+
+Features
+
+## HRV
+
+- SDNN
+- RMSSD
+- pNN50
+- LF/HF
+- NN intervals
+
+## EDA
+
+- Tonic
+- Phasic
+- SCR peaks
+
+## Accelerometer
+
+- Mean
+- Std
+- Energy
+- Entropy
+- Magnitude
+
+Everything is implemented in Python. 0
+
+---
+
+# 3. NeuroKit2 ⭐⭐⭐⭐⭐
+
+GitHub
+
+https://github.com/neuropsychology/NeuroKit
+
+This is probably the most widely cited physiological feature extraction library.
+
+Implemented features
+
+ECG
+
+- HR
+- HRV
+- RR interval
+- QRS
+- QT interval
+
+Respiration
+
+- Breathing rate
+- Respiratory variability
+
+EDA
+
+- Skin conductance response
+- Skin conductance level
+
+PPG
+
+- Pulse peaks
+- Pulse variability
+
+Read
+
+```
+neurokit2/
+
+hrv/
+
+ecg/
+
+ppg/
+
+eda/
+```
+
+---
+
+# 4. HeartPy ⭐⭐⭐⭐
+
+GitHub
+
+https://github.com/paulvangentcom/heartrate_analysis_python
+
+Excellent for learning
+
+- Peak detection
+- HRV
+- RR intervals
+- Signal cleaning
+- BPM estimation
+
+Read
+
+```
+heartpy/
+
+analysis.py
+
+peakdetection.py
+```
+
+---
+
+# 5. physioKIT ⭐⭐⭐⭐⭐
+
+GitHub
+
+https://github.com/AmbiqAI/physiokit
+
+Designed specifically for wearable physiological signals.
+
+Implements
+
+- ECG preprocessing
+- PPG preprocessing
+- Respiratory signals
+- IMU
+- HRV feature extraction
+- Synthetic signal generation
+- Signal quality metrics
+
+Excellent for understanding how raw biosignals become physiological features. 1
+
+---
+
+# 6. VitalDSP ⭐⭐⭐⭐⭐
+
+GitHub
+
+https://github.com/Oucru-Innovations/vital-DSP
+
+Research package from Oxford University Clinical Research Unit.
+
+Features
+
+- ECG morphology
+- PPG morphology
+- HRV
+- Respiratory rate
+- Waveform analysis
+- Signal quality
+
+Read
+
+```
+physiological_features/
+```
+
+2
+
+---
+
+# 7. tsfresh ⭐⭐⭐⭐⭐
+
+GitHub
+
+https://github.com/blue-yonder/tsfresh
+
+This is NOT healthcare specific.
+
+But almost every digital health researcher knows it.
+
+Automatically extracts
+
+- 700+ time-series features
+
+Examples
+
+- Entropy
+- Kurtosis
+- Skewness
+- FFT coefficients
+- Autocorrelation
+- Peak statistics
+- Rolling statistics
+
+---
+
+# 8. hctsa
+
+GitHub
+
+https://github.com/benfulcher/hctsa
+
+The largest feature extraction framework ever created.
+
+Extracts
+
+7000+
+
+time-series features
+
+Many wearable researchers use hctsa to discover biomarkers.
+
+---
+
+# 9. wearable-transdiagnostic-classification-allofus
+
+GitHub
+
+https://github.com/xueyann/wearable-transdiagnostic-classification-allofus
+
+One of the newest research repositories.
+
+Shows
+
+- Feature engineering
+- Correlation matrix
+- Feature importance
+- VIF
+- Logistic regression
+- Disease classification
+
+Study
+
+```
+feature_engineering.py
+
+analysis/
+
+statistics/
+```
+
+3
+
+---
+
+# 10. Stanford Wearable Infection Detection
+
+GitHub
+
+https://github.com/StanfordBioinformatics/wearable-infection
+
+Instead of ML, this repository teaches
+
+- Baseline estimation
+- Rolling baseline
+- Z-score
+- RHR trend
+- Deviation detection
+- Personalized thresholds
+
+This is one of the best repositories for longitudinal health analytics.
+
+---
+
+# Feature Categories Used in Wearable Health Research
+
+## Time-domain Features
+
+- Mean
+- Median
+- Maximum
+- Minimum
+- Variance
+- Standard deviation
+- MAD
+- RMS
+- IQR
+
+---
+
+## Heart-rate Features
+
+- Resting Heart Rate
+- Sleeping Heart Rate
+- Heart-rate Recovery
+- Heart-rate Reserve
+
+---
+
+## HRV Features
+
+- SDNN
+- RMSSD
+- SDSD
+- NN50
+- pNN50
+- CVNN
+
+Frequency domain
+
+- LF
+- HF
+- LF/HF
+
+---
+
+## Sleep Features
+
+- Sleep duration
+- Sleep efficiency
+- Sleep midpoint
+- Sleep regularity
+- Wake after sleep onset
+- Sleep fragmentation
+
+---
+
+## Activity Features
+
+- ENMO
+- MAD
+- Activity counts
+- Step cadence
+- Sedentary time
+- Active minutes
+
+---
+
+## Circadian Features
+
+- Interdaily Stability
+- Intradaily Variability
+- Relative Amplitude
+- Cosinor parameters
+
+---
+
+## Statistical Features
+
+- Pearson correlation
+- Spearman correlation
+- Partial correlation
+- Correlation matrix
+- Cross-correlation
+- Rolling correlation
+- Autocorrelation
+- Change-point detection
+- Mixed-effects models
+
+---
+
+# If I were doing a PhD in Wearable Health Analytics
+
+I would study these repositories in this exact order:
+
+1. Stanford Wearable Infection Detection
+2. scikit-digital-health
+3. FLIRT
+4. NeuroKit2
+5. physioKIT
+6. HeartPy
+7. tsfresh
+8. hctsa
+9. VitalDSP
+10. wearable-transdiagnostic-classification-allofus
+
+Together, these repositories cover nearly the entire research workflow:
+
+Raw Signals → Signal Cleaning → Physiological Feature Extraction → Statistical Analysis → Longitudinal Trend Analysis → Biomarker Discovery → Disease Classification.
