@@ -728,3 +728,411 @@ By completing this roadmap, you should be able to answer questions such as:
 ---
 
 ⭐ **Long-term Goal:** Build an end-to-end wearable health analytics pipeline capable of transforming raw physiological data into meaningful health insights, personalized recommendations, and predictive models using statistics, time-series analysis, and machine learning.
+
+
+
+# Research Resources for Wearable Health Analytics & Longitudinal Physiological Data Analysis
+
+> A curated list of research papers, open-source frameworks, and reproducible codebases that explain **how wearable physiological data is transformed into health insights**, including trend analysis, longitudinal analysis, feature engineering, disease prediction, and statistical modeling.
+
+---
+
+# What You Will Learn
+
+Instead of learning "how to plot a graph", these resources teach:
+
+- Longitudinal analysis
+- Correlation analysis
+- Correlation matrix construction
+- Feature engineering from wearable signals
+- Baseline estimation
+- Trend detection
+- Health state change detection
+- Disease prediction
+- Recovery estimation
+- Circadian rhythm analysis
+- Mixed-effects statistical models
+- Time-series feature extraction
+- Wearable biomarker discovery
+
+---
+
+# 1. Best Practices for Analyzing Large-Scale Health Data from Wearables ⭐⭐⭐⭐⭐
+
+**Why read it**
+
+This is considered one of the foundational papers for wearable health analytics.
+
+Topics
+
+- Data preprocessing
+- Missing data
+- Longitudinal analysis
+- Population bias
+- Statistical pitfalls
+- Feature engineering
+- Time-series methodology
+
+What you learn
+
+- Why rolling averages are used
+- Why daily averages are misleading
+- How to compare individuals
+- How to perform longitudinal studies
+
+Paper
+
+https://www.nature.com/articles/s41746-019-0121-1
+
+---
+
+# 2. NiMBaLWear Analytics Pipeline ⭐⭐⭐⭐⭐
+
+Paper
+
+https://link.springer.com/article/10.1186/s44247-024-00062-3
+
+One of the best open-source wearable analysis pipelines.
+
+Read especially
+
+- preprocessing
+- feature extraction
+- sleep analysis
+- activity analysis
+- gait analysis
+- physiological metrics
+
+You'll learn
+
+```
+Raw Accelerometer
+
+↓
+
+Signal Cleaning
+
+↓
+
+Wear Detection
+
+↓
+
+Activity Detection
+
+↓
+
+Sleep Detection
+
+↓
+
+Feature Engineering
+
+↓
+
+Health Metrics
+```
+
+---
+
+# 3. Functional Data Analysis on Wearable Sensor Data ⭐⭐⭐⭐⭐
+
+Paper
+
+https://arxiv.org/abs/2410.11562
+
+This paper surveys the statistical methods used in wearable research.
+
+Topics
+
+- Functional Data Analysis (FDA)
+- Longitudinal models
+- Smoothing
+- Functional PCA
+- Functional regression
+- Circadian modeling
+
+This is one of the best references for advanced statistical methodology. 0
+
+---
+
+# 4. Stanford Wearable Infection Detection
+
+GitHub + Paper
+
+https://github.com/StanfordBioinformatics/wearable-infection
+
+Read the code, not just the paper.
+
+Learn
+
+- Healthy baseline calculation
+- Rolling baseline
+- Z-score computation
+- Resting heart rate trend analysis
+- Health anomaly detection
+- Statistical thresholding
+
+---
+
+# 5. All of Us Wearable Dataset (NIH)
+
+Nature Medicine
+
+https://www.nature.com/articles/s41591-026-04352-3
+
+Purpose
+
+Understand how one of the world's largest wearable datasets is organized.
+
+Learn
+
+- Wearable feature definitions
+- Longitudinal cohort design
+- Data structure
+- Quality control
+- Research workflow
+
+1
+
+---
+
+# 6. Wearable-derived Physiological Features for Disease Classification
+
+Paper + Code
+
+https://github.com/xueyann/wearable-transdiagnostic-classification-allofus
+
+One of the best examples of wearable feature engineering.
+
+Methods
+
+- Pearson correlation matrix
+- Variance Inflation Factor (VIF)
+- Feature selection
+- Logistic regression
+- Disease prediction
+- Statistical inference
+
+Read especially
+
+```
+Feature Engineering
+
+↓
+
+Correlation Analysis
+
+↓
+
+Multicollinearity
+
+↓
+
+Regression
+
+↓
+
+Disease Prediction
+```
+
+2
+
+---
+
+# 7. Cross-study Analysis of Wearable Datasets
+
+Paper
+
+https://proceedings.mlr.press/v248/kasl24a.html
+
+Shows
+
+- Multiple regression
+- Resting Heart Rate analysis
+- Cross-study validation
+- Dataset bias
+- Generalization
+
+Excellent for understanding why the same wearable metric behaves differently across studies.
+
+3
+
+---
+
+# 8. Reproducible Analysis Pipeline for Mobile & Wearable Data
+
+Paper
+
+https://www.frontiersin.org/articles/10.3389/fdgth.2021.769823
+
+Topics
+
+- Raw sensor processing
+- Feature engineering
+- Longitudinal pipelines
+- Reproducible analysis
+
+Focus on
+
+- preprocessing
+- segmentation
+- feature computation
+- visualization
+
+4
+
+---
+
+# 9. GLOBEM Platform
+
+GitHub
+
+https://github.com/UW-EXP/GLOBEM
+
+Research platform for
+
+- depression detection
+- longitudinal behavior modeling
+- wearable sensing
+- mobile sensing
+
+Read
+
+```
+feature_engineering/
+
+model/
+
+analysis/
+```
+
+5
+
+---
+
+# 10. Data Quality in Wrist-Worn Wearables
+
+Paper
+
+https://arxiv.org/abs/2401.13518
+
+Topics
+
+- Missing data
+- Non-wear detection
+- Quality assessment
+- Wearable artifacts
+- Time-window analysis
+
+Useful because most real studies spend more effort on data quality than on machine learning.
+
+6
+
+---
+
+# Statistical Methods You Should Master
+
+These are the methods repeatedly used across wearable health papers.
+
+## Correlation
+
+- Pearson Correlation
+- Spearman Correlation
+- Cross Correlation
+
+---
+
+## Trend Analysis
+
+- Rolling Mean
+- Moving Average
+- Exponential Moving Average
+- LOWESS Smoothing
+
+---
+
+## Longitudinal Analysis
+
+- Mixed Effects Models
+- Generalized Estimating Equations (GEE)
+- Repeated Measures ANOVA
+
+---
+
+## Time-Series Analysis
+
+- Seasonal decomposition
+- Change Point Detection
+- ARIMA
+- Hidden Markov Models
+
+---
+
+## Feature Engineering
+
+Common wearable features
+
+- Mean
+- Median
+- Variance
+- Standard deviation
+- Coefficient of variation
+- Circadian amplitude
+- Sleep regularity
+- Activity fragmentation
+- Heart-rate recovery
+- Resting Heart Rate baseline
+- HRV baseline
+
+---
+
+## Statistical Modeling
+
+- Linear Regression
+- Logistic Regression
+- Cox Survival Models
+- Bayesian Models
+- Mixed Models
+
+---
+
+## Machine Learning
+
+- Random Forest
+- XGBoost
+- LSTM
+- Transformer
+- Temporal CNN
+
+---
+
+# What to Read in Every Paper
+
+Instead of reading only the abstract, study these sections:
+
+1. Data preprocessing
+2. Quality control
+3. Feature engineering
+4. Statistical analysis
+5. Validation
+6. Sensitivity analysis
+7. Supplementary methods
+8. GitHub code (if available)
+
+These sections contain the actual methodology used to derive health insights from wearable data.
+
+---
+
+# Final Recommendation
+
+If I had to choose only **five resources** to study deeply, they would be:
+
+1. **Best Practices for Analyzing Large-Scale Health Data from Wearables (npj Digital Medicine)** — overarching methodology.
+2. **NiMBaLWear Analytics Pipeline** — end-to-end research pipeline from raw signals to health metrics.
+3. **Stanford Wearable Infection Detection** — longitudinal RHR baseline and anomaly detection with reproducible code.
+4. **Functional Data Analysis on Wearable Sensor Data** — advanced statistical methods for continuous physiological data.
+5. **All of Us Wearable Disease Classification Repository** — real feature engineering, correlation analysis, multicollinearity checks, and disease modeling using Fitbit data.
+
+These five resources expose the actual research workflow used in digital health: **raw sensor data → preprocessing → physiological feature extraction → longitudinal statistical analysis → health insight or disease prediction**, rather than simply producing charts or summary statistics.
+````7
