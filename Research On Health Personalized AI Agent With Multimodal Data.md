@@ -787,6 +787,170 @@ Each note will contain
 - Relation to Our Project
 - My Ideas
 
+---
+
+# 💡 Intellectual Property & Patent Considerations
+
+## Overview
+
+One long-term objective of this project is to investigate whether the proposed framework introduces a **novel and patentable technical solution** in personalized AI-driven healthcare.
+
+At the current stage, this repository documents a **research vision**, not a patent claim. As the project evolves, specific technical innovations may emerge that warrant intellectual property protection.
+
+---
+
+# Current Assessment
+
+Based on our current understanding, the overall concept is **research-worthy**, but the high-level idea alone is unlikely to satisfy patentability requirements.
+
+Examples of ideas that are generally **not patentable** include:
+
+- Using an LLM for healthcare
+- Medical chatbots
+- Combining wearable data with AI
+- Deploying an LLM on mobile devices
+- Using multimodal health information for diagnosis
+
+These concepts have already been explored in both academic literature and existing patents.
+
+Instead, patentability usually depends on introducing a **novel technical mechanism** that solves a specific engineering problem.
+
+---
+
+# Potential Patentable Contributions
+
+The following components represent potential intellectual property opportunities if they introduce a genuinely new technical solution.
+
+| Component | Patent Potential | Notes |
+|-----------|-----------------|-------|
+| Interactive Evidence Acquisition | ⭐⭐⭐⭐⭐ | Dynamic selection of the next most informative clinical evidence. |
+| Personalized Clinical Reasoning Engine | ⭐⭐⭐⭐⭐ | A reasoning framework that continuously updates clinical hypotheses using multimodal evidence. |
+| Adaptive Test Recommendation Algorithm | ⭐⭐⭐⭐⭐ | Selecting the next diagnostic test based on uncertainty, confidence, and expected information gain. |
+| Multimodal Health Evidence Fusion | ⭐⭐⭐⭐ | Novel integration of wearable, laboratory, and mobile health features for clinical reasoning. |
+| Edge-based Personalized Medical Agent | ⭐⭐⭐⭐ | Privacy-preserving, on-device clinical reasoning architecture. |
+| Longitudinal Patient Memory | ⭐⭐⭐⭐ | Continuous personalized health memory maintained entirely on edge devices. |
+| Privacy-preserving Personalized AI | ⭐⭐⭐⭐ | Secure reasoning over sensitive health data without cloud transmission. |
+
+---
+
+# Research Gap Toward Patentability
+
+Current medical LLMs generally:
+
+- Answer questions using available patient information.
+- Assume that all required information is already provided.
+- Rarely decide what additional evidence is necessary.
+- Have limited personalization for long-term patient monitoring.
+- Often rely on cloud-based inference.
+
+This project investigates a different workflow.
+
+```
+Patient
+      │
+      ▼
+General Medical LLM
+      │
+      ▼
+Generate Initial Clinical Hypothesis
+      │
+      ▼
+Determine Missing Evidence
+      │
+      ▼
+Request Most Informative Health Data
+      │
+      ▼
+Receive New Personalized Evidence
+      │
+      ▼
+Update Clinical Reasoning
+      │
+      ▼
+Need More Evidence?
+      │
+ ┌────┴────┐
+ │         │
+Yes       No
+ │         │
+ ▼         ▼
+Request   Final Clinical Recommendation
+Another
+Evidence
+```
+
+The novelty is **not** simply using an LLM, but designing a framework that performs **interactive, personalized clinical reasoning** through adaptive evidence acquisition.
+
+---
+
+# Possible Patent Direction
+
+Rather than patenting an entire medical assistant, future work may focus on protecting a specific technical contribution such as:
+
+- A dynamic evidence acquisition algorithm.
+- An uncertainty-aware diagnostic reasoning framework.
+- A multimodal feature orchestration system.
+- A privacy-preserving on-device reasoning architecture.
+- A personalized clinical memory mechanism.
+- A physician-inspired reasoning workflow for edge intelligence.
+
+These represent concrete technical mechanisms that are more likely to meet patentability criteria than a broad conceptual idea.
+
+---
+
+# Recommended Strategy
+
+The recommended development roadmap is:
+
+### Phase 1 — Research
+
+- Conduct a comprehensive literature review.
+- Identify limitations of existing medical LLMs.
+- Develop a conceptual architecture.
+
+---
+
+### Phase 2 — Prototype
+
+- Implement the reasoning framework.
+- Integrate multimodal health feature extraction.
+- Evaluate personalized clinical reasoning.
+
+---
+
+### Phase 3 — Novelty Analysis
+
+- Compare the proposed framework with existing research and patents.
+- Identify unique technical contributions.
+- Validate improvements through experiments.
+
+---
+
+### Phase 4 — Intellectual Property
+
+If a genuinely novel technical mechanism is identified:
+
+1. Perform a prior-art search.
+2. Consult with a university technology transfer office or patent professional.
+3. File a provisional or full patent application **before public disclosure**, if appropriate.
+
+---
+
+# Current Conclusion
+
+At this stage, the project should be viewed primarily as a **research initiative**.
+
+The strongest opportunities for future intellectual property appear to be:
+
+1. **Interactive Evidence Acquisition**
+2. **Adaptive Test Recommendation**
+3. **Personalized Clinical Reasoning**
+4. **Edge-based Privacy-Preserving Medical AI**
+
+These areas combine active research challenges with the potential for novel technical contributions that may support future patent applications, subject to prior-art analysis and legal review.
+
+> **Note:** This assessment is intended for research planning only and should not be interpreted as legal advice or a determination of patentability. Patent eligibility depends on jurisdiction, prior art, and the specific technical implementation developed during the project.
+> 
 # License
 
 This repository currently documents an ongoing research idea and serves as the conceptual foundation for future implementation.
