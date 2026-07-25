@@ -58,6 +58,132 @@ Together, these enable a compact model to perform personalized sleep analysis wi
 # 2. Related Work
 
 The paper reviews four major research areas.
+# Summary: What Do LLMs Do with Health Data?
+
+Large Language Models (LLMs) are increasingly being used in healthcare to **analyze physiological data**, **generate personalized health insights**, and **support clinical decision-making**. Rather than processing raw sensor signals directly, LLMs typically combine physiological measurements with textual or contextual information to provide meaningful interpretations.
+
+## Types of Health Data Used
+
+LLMs can work with various physiological signals, including:
+
+- **ECG (Electrocardiogram):** Records the electrical activity of the heart.
+- **PPG (Photoplethysmogram):** Measures blood volume changes using optical sensors, commonly found in smartwatches.
+- **Respiratory waveforms:** Capture breathing patterns and respiratory rate.
+- **Heart Rate Variability (HRV):** Indicates variations in time between heartbeats.
+- **Sleep metrics:** Such as sleep stages, duration, and quality collected from wearable devices.
+
+---
+
+# Applications of LLMs in Healthcare
+
+## 1. Physiological Signal Analysis
+
+LLMs help interpret physiological signals to understand a person's health condition and identify meaningful patterns.
+
+---
+
+## 2. Personalized Health Insights
+
+By combining sensor data with user context (e.g., age, lifestyle, medical history), LLMs generate personalized recommendations and explanations.
+
+Example:
+
+> "Your heart rate variability decreased after several nights of poor sleep, suggesting increased physiological stress."
+
+---
+
+## 3. Medical Decision Support
+
+LLMs assist clinicians by summarizing patient data, explaining physiological trends, and supporting healthcare decision-making.
+
+---
+
+## 4. Context-Aware Health Predictions
+
+LLMs integrate physiological signals with contextual information (such as sleep habits or daily activities) to predict potential health conditions or risks.
+
+---
+
+## Examples of Existing Systems
+
+### MedTsLLM
+
+A multimodal framework that combines physiological time-series data with textual information to perform tasks such as:
+
+- Semantic segmentation
+- Boundary detection
+- Anomaly detection
+
+---
+
+### PhysioLLM
+
+Uses wearable sensor data together with contextual information to:
+
+- Analyze physiological trends
+- Discover relationships between health variables
+- Generate personalized health recommendations
+
+---
+
+### Health-LLM
+
+Interprets physiological measurements such as:
+
+- Resting heart rate
+- Sleep metrics
+
+to provide context-aware health predictions and insights.
+
+---
+
+# Current Limitations of LLMs in Healthcare
+
+Despite their capabilities, existing approaches face several challenges:
+
+### High Computational Cost
+
+Large models (e.g., GPT-4-class models and Qwen-Max) require substantial memory and computing power, making them unsuitable for smartphones and wearable devices.
+
+---
+
+### Difficulty Processing Numerical Signals
+
+LLMs are designed primarily for natural language rather than continuous numerical data.
+
+As a result, raw physiological signals usually require:
+
+- Feature extraction
+- Signal preprocessing
+- Multimodal architectures
+
+before they can be effectively used by an LLM.
+
+---
+
+### Limited Physiological Datasets
+
+The lack of diverse, high-quality public physiological datasets limits:
+
+- Model training
+- Validation
+- Generalization
+
+---
+
+# How This Paper Addresses These Challenges
+
+The proposed framework improves existing approaches by:
+
+- Generating realistic synthetic physiological data to overcome data scarcity.
+- Distilling knowledge from a large LLM into a compact model suitable for edge devices.
+- Enabling real-time, personalized sleep analysis directly on smartphones and wearable devices.
+
+---
+
+# Key Takeaway
+
+LLMs in healthcare **do not simply classify physiological signals**. Instead, they **interpret physiological measurements in context**, combining sensor data, medical knowledge, and user information to generate personalized health insights, answer health-related questions, support clinical decision-making, and provide actionable recommendations.
 
 ## 2.1 Sleep Analysis
 
