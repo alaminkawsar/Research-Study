@@ -540,8 +540,252 @@ Build an AI physician assistant capable of:
 - Build evaluation benchmarks
 - Prototype edge deployment
 - Prepare conference submission
+- 
+---
+
+# 📚 Curated Literature Roadmap
+
+> This repository maintains a living collection of research papers related to Personalized Agentic Clinical Reasoning, Medical LLMs, Wearable AI, Multimodal Learning, and Edge Intelligence.
 
 ---
+
+# Reading Priority
+
+| Priority | Meaning |
+|----------|---------|
+| 🔥 | Must Read Immediately |
+| ⭐⭐⭐⭐⭐ | Essential |
+| ⭐⭐⭐⭐ | Highly Recommended |
+| ⭐⭐⭐ | Useful |
+| ⭐⭐ | Background Reading |
+
+---
+
+# Reading Status
+
+| Status | Meaning |
+|---------|---------|
+| ⬜ | Not Started |
+| 🟨 | Reading |
+| 🟩 | Completed |
+| 📝 | Notes Completed |
+| 💻 | Code Explored |
+
+---
+
+# Research Categories
+
+| ID | Area | Target Papers |
+|----|------|--------------:|
+| 01 | Medical LLMs | 15 |
+| 02 | Agentic AI | 10 |
+| 03 | Clinical Reasoning | 10 |
+| 04 | Multimodal Learning | 10 |
+| 05 | Wearable AI | 10 |
+| 06 | Mobile Health | 8 |
+| 07 | Edge AI | 10 |
+| 08 | Personalized Medicine | 8 |
+| 09 | Federated Learning | 8 |
+| 10 | Explainable AI | 8 |
+| 11 | Healthcare Benchmarks | 8 |
+| 12 | Digital Twins | 5 |
+
+Target Total Papers ≈ 110
+
+---
+
+# 01 Medical Large Language Models
+
+| Priority | Paper | Year | Venue | Summary | Code | Paper | Status |
+|----------|------|------|-------|----------|------|-------|--------|
+| 🔥 | Med-PaLM | 2023 | Nature | First major medical LLM | ✓ | ✓ | ⬜ |
+| 🔥 | Med-PaLM 2 | 2024 | Nature | Improved clinical reasoning | ✓ | ✓ | ⬜ |
+| 🔥 | A Survey of LLM-based Agents in Medicine | 2025 | ACL Findings | Complete survey | — | ✓ | ⬜ |
+| ⭐⭐⭐⭐⭐ | HuatuoGPT | 2023 | arXiv | Open-source medical LLM | ✓ | ✓ | ⬜ |
+| ⭐⭐⭐⭐ | DISC-MedLLM | 2024 | arXiv | Medical instruction tuning | ✓ | ✓ | ⬜ |
+| ⭐⭐⭐⭐ | DoctorGLM | 2023 | arXiv | Chinese medical LLM | ✓ | ✓ | ⬜ |
+| ⭐⭐⭐⭐ | PMC-LLaMA | 2023 | arXiv | Biomedical foundation model | ✓ | ✓ | ⬜ |
+
+---
+
+# 02 Agentic AI
+
+| Priority | Paper | Summary | Status |
+|----------|---------|--------|
+| 🔥 | ClinSeekAgent | Closest paper to our idea | ⬜ |
+| 🔥 | Agent Hospital | Multi-agent healthcare | ⬜ |
+| ⭐⭐⭐⭐⭐ | AutoGen | Multi-agent framework | ⬜ |
+| ⭐⭐⭐⭐ | ReAct | Reasoning + Acting | ⬜ |
+| ⭐⭐⭐⭐ | Toolformer | Tool usage | ⬜ |
+| ⭐⭐⭐⭐ | HuggingGPT | AI collaboration | ⬜ |
+
+---
+
+# 03 Clinical Reasoning
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Reasoning LLMs in the Medical Domain | Medical reasoning survey | ⬜ |
+| ⭐⭐⭐⭐⭐ | Chain-of-Thought Prompting | Reasoning | ⬜ |
+| ⭐⭐⭐⭐⭐ | Tree-of-Thought | Search reasoning | ⬜ |
+| ⭐⭐⭐⭐ | Graph-of-Thought | Structured reasoning | ⬜ |
+| ⭐⭐⭐⭐ | MedPrompt | Medical prompting | ⬜ |
+
+---
+
+# 04 Multimodal Learning
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Multimodal LLMs in Medical Research | Complete survey | ⬜ |
+| ⭐⭐⭐⭐⭐ | LLaVA-Med | Medical vision-language | ⬜ |
+| ⭐⭐⭐⭐ | BioViL | Medical representation | ⬜ |
+| ⭐⭐⭐⭐ | Med-Flamingo | Medical multimodal | ⬜ |
+
+---
+
+# 05 Wearable AI
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Foundation Models for Wearable Health | Survey | ⬜ |
+| ⭐⭐⭐⭐⭐ | Time-Series Foundation Models | Wearables | ⬜ |
+| ⭐⭐⭐⭐ | ECG Foundation Models | ECG | ⬜ |
+| ⭐⭐⭐⭐ | Sleep Foundation Models | Sleep | ⬜ |
+
+---
+
+# 06 Mobile Health
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Mobile Health Survey | mHealth overview | ⬜ |
+| ⭐⭐⭐⭐⭐ | Smartphone Health Monitoring | Continuous monitoring | ⬜ |
+| ⭐⭐⭐⭐ | Digital Biomarkers | Personalized medicine | ⬜ |
+
+---
+
+# 07 Edge AI
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Medicine on the Edge | Medical LLM deployment | ⬜ |
+| ⭐⭐⭐⭐⭐ | TinyML Survey | Tiny models | ⬜ |
+| ⭐⭐⭐⭐ | Edge Intelligence Survey | AI deployment | ⬜ |
+| ⭐⭐⭐⭐ | MobileLLM | Efficient LLM | ⬜ |
+
+---
+
+# 08 Personalized Medicine
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Personalized Healthcare Foundation Models | Future healthcare | ⬜ |
+| ⭐⭐⭐⭐⭐ | Precision Medicine Review | Clinical personalization | ⬜ |
+| ⭐⭐⭐⭐ | Digital Phenotyping | Patient modeling | ⬜ |
+
+---
+
+# 09 Federated Learning
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Federated Learning Survey | Privacy | ⬜ |
+| ⭐⭐⭐⭐⭐ | FedAvg | Classic | ⬜ |
+| ⭐⭐⭐⭐ | Medical Federated Learning | Healthcare | ⬜ |
+
+---
+
+# 10 Explainable AI
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | Explainable Medical AI Survey | XAI | ⬜ |
+| ⭐⭐⭐⭐⭐ | SHAP | Interpretability | ⬜ |
+| ⭐⭐⭐⭐ | LIME | Interpretability | ⬜ |
+
+---
+
+# 11 Benchmarks
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| 🔥 | AgentRx | Medical agent benchmark | ⬜ |
+| ⭐⭐⭐⭐⭐ | MedQA | QA benchmark | ⬜ |
+| ⭐⭐⭐⭐⭐ | PubMedQA | QA | ⬜ |
+| ⭐⭐⭐⭐ | MMLU-Med | Medical reasoning | ⬜ |
+
+---
+
+# 12 Digital Twins
+
+| Priority | Paper | Summary | Status |
+|----------|------|----------|--------|
+| ⭐⭐⭐⭐⭐ | Digital Twins in Healthcare Survey | Personalized digital patients | ⬜ |
+| ⭐⭐⭐⭐ | Human Digital Twin | Longitudinal modeling | ⬜ |
+
+---
+
+# Personal Reading Dashboard
+
+## Statistics
+
+Target Papers: 110
+
+Completed: 0
+
+Reading: 0
+
+Need Notes: 0
+
+---
+
+## Progress
+
+```
+
+□□□□□□□□□□
+
+0%
+
+```
+
+---
+
+# Personal Notes
+
+Each paper will have its own note under
+
+/docs/literature/
+
+Example
+
+```
+
+docs/
+literature/
+├── MedPaLM.md
+├── ClinSeekAgent.md
+├── AgentHospital.md
+├── LLaVAMed.md
+├── MedicineOnTheEdge.md
+├── MedPrompt.md
+
+```
+
+Each note will contain
+
+- Abstract
+- Main Idea
+- Architecture
+- Dataset
+- Evaluation
+- Strengths
+- Weaknesses
+- Figures
+- Future Work
+- Relation to Our Project
+- My Ideas
 
 # License
 
