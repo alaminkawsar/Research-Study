@@ -18,19 +18,37 @@ This repository contains detailed research summaries and patent analyses focused
 
 **Research Focus**: Intelligent earbuds that use AI to determine whether users need to be interrupted from their audio experience.
 
-### [Wearable Sensor + CGM Datasets](./CGM_Non_Envasive_way.md)
-
-**Research Focus**: Curated overview of datasets combining continuous glucose monitoring (CGM) with wearable physiological sensors, suggested unified schema, recommended tasks and resources for non‑invasive glucose prediction research.
-
 **Key Topics**:
-- Dataset summaries (PhysioCGM, BIG IDEAs, HUPA‑UCM, D1NAMO, OhioT1DM, T1D‑UOM, BrisT1D, Glucose‑ML)
-- Unified dataset schema and preprocessing recommendations
-- Suggested ML tasks: trend detection, spike prediction, state classification, excursion prediction
-- Expanded resources for signal processing, feature extraction, ML frameworks and ethics
+- Active Noise Cancellation (ANC) limitations
+- Environmental sound detection vs. attention inference
+- Patent landscape analysis (8 related patents reviewed)
+- Proposed multimodal attention inference system
+- Human-centric interruption logic
 
-### [Other documents]
+**Core Innovation**: Shifting from "What sound is happening?" to "Is another human intentionally trying to communicate with the wearer?"
 
-(See repository root for additional markdown documents)
+**Research Gaps Identified**:
+1. No patent combines all attention inference components into one system
+2. Current systems rely on rule-based detection rather than probability scoring
+3. Opportunity for social interaction understanding vs. simple audio classification
+
+**Document Structure**:
+1. Background & Problem Statement
+2. Initial Concept
+3. Existing Patent Landscape (8 patents analyzed)
+4. Current Technology Coverage
+5. Research Gap Analysis
+6. Human Attention Inference Framework
+7. Proposed AI Architecture (12-stage pipeline)
+8. Future Research Directions
+9. Patent References
+10. Improvement Areas (TODO for future enhancements)
+
+**Target Audience**: 
+- Product engineers designing smart earbuds
+- Researchers in audio signal processing and AI
+- Patent attorneys evaluating IP opportunities
+- Product managers in consumer electronics
 
 ## 🎯 Key Research Insights
 
