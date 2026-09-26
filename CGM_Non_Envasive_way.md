@@ -200,11 +200,3 @@ How to cite
 Cite the original dataset publications or data portals. When using multiple datasets, list each dataset and its source. Example:
 
 "Dataset: PhysioCGM — [PhysioCGM paper link]; BIG IDEAs — PhysioNet link; ..."
-
-Next steps I can take
----------------------
-- Commit this README.md to the repository (I can add it now)
-- Create per‑dataset example notebooks (data loading & preprocessing templates)
-- Generate a scripts/ folder with utilities for resampling, synchronization and feature extraction
-
-If you want, I will add this README.md to the repository now.
