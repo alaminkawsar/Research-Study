@@ -834,4 +834,4 @@ Early detection → Earlier awareness → Potentially earlier preventive action
 
 তবে এই শেষ অংশটি এখনো future clinical validation-এর বিষয়—এটি বর্তমান research থেকে established medical outcome হিসেবে ধরা যাবে না।Original Google Research article: [Insulin resistance prediction from wearables and routine blood biomarkers](https://research.google/blog/insulin-resistance-prediction-from-wearables-and-routine-blood-biomarkers/?utm_source=chatgpt.com)
 
-একটা গুরুত্বপূর্ণ distinction: এই article-এ HOMA-IR prediction এবং insulin-resistance classification—দুটো related কিন্তু এক জিনিস নয়। HOMA-IR হলো একটি calculated marker, আর classification-এ researchers HOMA-IR ≥ 2.9 threshold ব্যবহার করেছেন। এই distinction-টা আমি translation-এ ইচ্ছাকৃতভাবে রেখেছি, যাতে paper-এর technical meaning হারিয়ে না যায়। 
+একটা গুরুত্বপূর্ণ distinction: এই article-এ HOMA-IR prediction এবং insulin-resistance classification—দুটো related কিন্তু এক জিনিস নয়। HOMA-IR হলো একটি calculated marker, আর classification-এ researchers HOMA-IR ≥ 2.9 threshold ব্যবহার করেছেন। 
