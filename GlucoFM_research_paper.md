@@ -361,5 +361,3 @@ GlucoFM unlabeled CGM data থেকে reusable representation শিখে ব
 এক লাইনে GlucoFM
 
 GlucoFM হলো এমন একটি AI foundation model, যেটি raw CGM data থেকে মানুষের glucose-এর slow baseline pattern এবং fast/short-term changes আলাদাভাবে শিখে, তারপর সেই learned representation ব্যবহার করে বিভিন্ন metabolic health-related prediction করার চেষ্টা করে।মূল Google Research article: [GlucoFM: Foundation model for continuous glucose monitoring](https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/?utm_source=chatgpt.com) 
-
-চাইলে আমি এটাকে আরও , অর্থাৎ একজন non-technical মানুষের বোঝার মতো করে “GlucoFM আসলে কী করছে?”—এইভাবে সহজ Banglish-style Bengali-তে।
