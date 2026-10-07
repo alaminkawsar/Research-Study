@@ -194,3 +194,4 @@ Both Resting Heart Rate (RHR) and Heart Rate Variability (HRV) are most valuable
 
 2. Oura Health — Average HRV Guide  
    https://ouraring.com/blog/average-hrv/
+
