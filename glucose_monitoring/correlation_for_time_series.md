@@ -1,3 +1,110 @@
+# Time series correlation List
+**GPT-Q1:** <br>
+*Do you find more time series correlation name?* <br>
+* Autocorrelation Function (ACF)
+
+* Partial Autocorrelation Function (PACF)
+
+* Cross-Correlation Function (CCF)
+
+* Lagged Cross-Correlation
+
+* Lead–Lag Correlation
+
+* Dynamic Correlation
+
+* Rolling Correlation
+
+* Moving-Window Correlation
+
+* Time-Varying Correlation
+
+* Detrended Cross-Correlation Analysis (DCCA)
+
+* Detrended Fluctuation Analysis (DFA)-based correlation
+
+* Wavelet Correlation
+
+* Wavelet Coherence
+
+* Spectral Correlation
+
+* Cross-Spectral Correlation
+
+* Magnitude-Squared Coherence
+
+* Phase Coherence
+
+* Circular Cross-Correlation
+
+* Seasonal Cross-Correlation
+
+* Partial Cross-Correlation
+
+* Prewhitened Cross-Correlation
+
+* Rank Cross-Correlation for Time Series
+
+* Distance Cross-Correlation
+
+* Quantile Cross-Correlation
+
+* Conditional Correlation
+
+* Multivariate Autocorrelation
+
+* Multivariate Cross-Correlation
+
+* Canonical Correlation for Time Series
+
+* Cointegration-Based Long-Run Association
+
+* Tail Dependence in Time Series
+
+* Copula-Based Dynamic Dependence
+
+* Local Gaussian Correlation
+
+* Transfer Entropy
+
+* Convergent Cross Mapping (CCM)
+
+* Correlation Integral
+
+* Recurrence-Based Measures of Dependence
+
+* Time-Frequency Correlation
+
+* Lagged Mutual Information
+
+* Cross-Mutual Information
+
+* Dynamic Conditional Correlation (DCC)
+
+* Generalized Autoregressive Score (GAS) Dynamic Correlation
+
+* BEKK-GARCH Conditional Covariance/Correlation
+
+* Engle–Kroner Multivariate GARCH Correlation
+
+* Pearson Correlation of Differenced Series
+
+* Correlation of Residuals
+
+* Correlation of Innovations
+
+* Correlation of Forecast Errors
+
+* Intraclass Correlation for Repeated Measures
+
+* Agreement/Concordance Measures for Longitudinal Data
+
+---
+
+**GPT-Q2:** <br>
+*I want to see the glucose trends and others physiological data correlation, so which one might helpful for this?*
+
+
 For studying correlations between glucose trends and other physiological data (heart rate, sleep, physical activity, stress, blood pressure, etc.), these time-series methods are especially useful:
 
 | Method                                         | Useful for                                                                                                        |
@@ -36,6 +143,10 @@ A key consideration: glucose and physiological signals often have trends, daily 
 
 Important: correlation and predictive dependence do not establish that one physiological variable causes glucose to change. These analyses can reveal patterns, but they do not by themselves establish a medical conclusion.
 
+---
+
+**GPT-Q3**: <br>
+*Right, I want to see just a little change of spike, for example taking 170g or more glucose and see any kinds of effectmethods
 
 Ah, got it! You want to study small physiological changes after consuming a large amount of glucose (170 g or more) and identify how those changes relate to the glucose spike over time.
 
@@ -109,3 +220,80 @@ Existing research dataset
 Other
 
 Find suitable methods
+
+---
+
+**GPT-Q4**: <br>
+*I want to study subtle physiological changes associated with glucose spikes. Signals: Heart rate, Heart-rate variability (HRV), Blood pressure, Skin temperature, Sweating / electrodermal activity, Respiration rate, Brain activity (EEG), Insulin / other blood biomarkers, Other signals. Glucose data source: CGM. Recommend suitable time-series analysis methods.*
+
+For your project, I would treat this as a multimodal physiological time-series analysis problem: use continuous glucose monitor (CGM) data to identify glucose spikes, then investigate whether subtle changes in heart rate, HRV, blood pressure, skin temperature, electrodermal activity, respiration, EEG, or blood biomarkers occur before, during, or after those spikes.
+
+The key is to distinguish a genuine physiological response from ordinary variation, sensor noise, time-of-day effects, and changes caused by activity or stress.
+
+### 1\. Best methods for your research
+
+1\. Change-point detection
+
+Detect the time when heart rate, HRV, or skin temperature begins to deviate from its baseline. Useful for finding subtle shifts rather than only large spikes.
+
+2\. Event-triggered analysis
+
+Align measurements around each detected glucose rise, then calculate average responses before and after the event. This is a strong first method for your question.
+
+3\. First differences and rate of change
+
+Analyze changes between consecutive measurements instead of only raw values. For example, determine whether HRV starts falling as glucose rises.
+
+4\. Lagged cross-correlation
+
+Test whether a physiological signal tends to change before or after a glucose change. Check several plausible time lags, not just simultaneous measurements.
+
+5\. Distributed-lag regression
+
+Estimate how glucose changes are associated with physiological measurements across a window of time, while adjusting for factors such as activity, meals, sleep, and time of day.
+
+6\. Mixed-effects models
+
+If you have repeated observations or multiple participants, estimate the average response while accounting for differences between people and events.
+
+These choices are consistent with research emphasizing temporal dependence, glucose excursions, data quality, and the time-series nature of CGM measurements.
+
+### 2\. How I would build the analysis
+
+| Stage                 | Recommended method                                                          |
+| --------------------- | --------------------------------------------------------------------------- |
+| Prepare the data      | Timestamp alignment, missing-data checks, sensor-quality checks             |
+| Detect glucose events | Local peak detection, excursion size and duration                           |
+| Find subtle responses | Change-point detection, first differences                                   |
+| Measure timing        | Lagged cross-correlation, distributed-lag models                            |
+| Compare events        | Event-triggered averages and mixed-effects models                           |
+| Check reliability     | Confidence intervals, sensitivity analysis, correction for multiple testing |
+
+Important detail: CGMs measure glucose in interstitial fluid rather than directly measuring blood glucose, so sensor lag and noise matter when interpreting exact timing.
+
+### 3\. What to prioritize by signal
+
+* Heart rate and HRV: first differences, change-point detection, lagged correlation.
+
+* Blood pressure: event-triggered analysis and distributed-lag regression.
+
+* Skin temperature and sweating: change-point detection and rolling statistics.
+
+* Respiration: lagged correlation and time-frequency analysis.
+
+* EEG: signal-specific feature extraction, followed by event-related analysis; raw EEG samples should not simply be correlated directly with CGM readings.
+
+* Insulin and other biomarkers: distributed-lag models, accounting for when each sample was collected.
+
+### My strongest recommendation
+
+Start with event-triggered analysis + change-point detection + distributed-lag regression. Together, these can help you find small changes, identify when they occur, and estimate their association with glucose dynamics.
+
+For safety, study naturally occurring glucose excursions or existing research datasets rather than deliberately consuming 170 g or more of pure glucose. That amount is a substantial acute glucose load and should not be used as a self-experiment without appropriate medical supervision.
+
+---
+
+**Looking for more insight**
+
+---
+
