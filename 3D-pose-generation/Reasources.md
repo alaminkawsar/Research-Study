@@ -1,82 +1,157 @@
-# 3D-Pose-from-IMPU's sensor
-![Ultra Inertial Poser: Scalable Motion Capture and Tracking from Sparse Inertial Sensors and Ultra-Wideband Ranging · Sensing, Perception & Interaction Lab](https://images.openai.com/static-rsc-4/NWdLWoURTmf-tSXDP8xTnJh4sVcH4NSQevrL9ZXJQ7r8NLMiJZAaHzgyv-aBRLEFVBm97noFyE4JZogfphSKymyVRt8jL-ZgDAp8vxtB6-6O_suYmVfW2mOEFJz8SjESDVl9ui6SRDK-IA05grswVFc9TY-ZQahxTfNoQHX27QnY6Qsrw3PP6wJ6KGhzlnUR?purpose=fullsize)
+Here is a more complete resource collection for 3D human motion reconstruction from wearable IMUs, organized around datasets, papers, open-source implementations, and the tools needed to turn predicted poses into an animated 3D human.
 
-![NoahYacowar](https://images.openai.com/static-rsc-4/Nlyokmp7HSNiPZ0qs66lernniLCC1rkNPwQrOVTEQtuLa8d8wpN5xir4rHWyNqivJmV8JHo0lU8LpX2soclDK5KDIPGbKX2x5SvLPRZ692nV4JIMSqSkTacGVFOfsk9sWbb53j3yfxfZNChdjs-BNbrptwh67cpmZFSWhvbDGB3ykKKj2nkWelTHfu-ChG9V?purpose=fullsize)
-
-![Best Mocap Full-Body Suit Manufacturer and Supplier | Virdyn](https://images.openai.com/static-rsc-4/JHd7rzWZcu5iK3o3W04XHTOXwbFzQZ89GuGuw1MjcE_wvL1l2pmLAldPawc0SKaGCHkVBbk7lhJgjORoK0Cd8Zwc_7O-vip86KEtwZqmeAOrOdVyOr9ZTnBGfMszvLlDvtVWtbKWeG0OYueF2UuN1Y0KSpbut6ThxSZwTBIGr5meNrh-tcsUdosCuyWppdFn?purpose=fullsize)
-
-The key distinction is whether you want to visualize the activity or estimate the person's actual 3D body pose. The second is a much more interesting computer vision and machine learning problem.
-
-### Three public datasets to start with
+### 1\. Essential datasets
 
 ![DIP](https://images.openai.com/static-rsc-4/zaaIK3CqcDz-wIuD8AfaciPq_uezcXcvMpEZhgn76e8XviVGxbwIyRzmpE-n9ygHpEzatdqq_GdQrTmXsSq1a-obyxgUkVEb_yMTxQDfYjOwhwlJRofAm4dMKnfShfOulLMe4SK0trjcCaWsuVqzQLgOGVXZgSMa0YXLaSpy7n70wxaAb-QTMRAqErApRw7z?purpose=fullsize)
 
-1\. DIP-IMU
+DIP-IMU — sparse inertial pose estimation
 
-Best starting point
+A classic starting benchmark with IMU measurements and reference poses. Useful for reproducing an established method and evaluating unseen-subject generalization.
 
-Wearable IMU measurements paired with 3D motion-capture ground truth. Suitable for learning to reconstruct full-body pose from inertial signals.
+[Official dataset and paper](https://dip.is.tuebingen.mpg.de/?utm_source=chatgpt.com)
 
-[Dataset and download](https://dip.is.tuebingen.mpg.de/?utm_source=chatgpt.com) · [Research paper](https://doi.org/10.1109/ICCV.2017.336?utm_source=chatgpt.com)
+![Real-Time Multi-person Motion Capture from Multi-view Video and IMUs | International Journal of Computer Vision | Springer Nature Link](https://images.openai.com/static-rsc-4/mZ9Lx-ddkEQxawxugZWLJZv0z7bQVoZMDEAE2FPRB9N3u6poJG3n4vI7VeoOrdF5dimANtDMLmFQKrqxN2CWPwgELL7o1BhQI_1vuJVKO9ekeRMGVArZZxwU1N3AvAOkMCG-GG6Dhh7eWCkCyD0sm-9L3P1hAde_Lr2SDQcqDbWRgrbrKacivOyA8IlQ2Tyt?purpose=fullsize)
 
-![App rapidly gathers sophisticated movement data, at 1% of the usual cost](https://images.openai.com/static-rsc-4/734EYBqJKx-YtJWzEwPBLDs3jnRPGCOTG43tQKjy2y_slehTBvxivnUNPe_8oeNHlrPE5BGbQpe2a190UbHimxZ-hPgx2xQ1qXicVaIRwp9Rd0hlArUzjeHR7TpbwHQI7orJ290JvzXOcxf11NqyLJdVD7QIgNuSv3x9oT1obViyjRrxbPr2RwQ_-7s784hN?purpose=fullsize)
+TotalCapture — sensors plus video
 
-2\. TotalCapture
+Synchronized video, IMUs, and Vicon motion-capture labels. Particularly useful for comparing sensor-only reconstruction with multimodal methods.
 
-Combines synchronized multi-view video, wearable IMUs, and motion-capture ground truth. Particularly useful for comparing sensor-only and sensor-plus-vision approaches.
+[Official dataset](https://cvssp.org/data/totalcapture/?utm_source=chatgpt.com)
 
-[Dataset and access](https://cvssp.org/data/totalcapture/?utm_source=chatgpt.com) · [Original paper](https://doi.org/10.1109/ICCV.2017.336?utm_source=chatgpt.com)
+Registration and research-use restrictions apply.
 
-Access requires registration; check the research-only license.
+![iPhoneとApple WatchとAirPodsでVRにダイブできる？ | ギズモード・ジャパン](https://images.openai.com/static-rsc-4/Q3pchz_j4UiqnKA8KaT6HQx8VEpBawwuZXTN_Q-zQVkrNVvOpGv0RCYn3k7EmXQeoyr786-dDiqCnmDRhetL85C6B-GW7JhwqYuBqBFQ2kf-F8w0Lue7d8bay_ic3SBW5ofZv5hoU4ceZpCpRdviqjJaWgWEh5gwB-v_sFFs2cP2ZmCQJiCKXi5pyLj3YOL0?purpose=fullsize)
 
-![Vimal Mollyn](https://images.openai.com/static-rsc-4/2BI1LvyP4CPcxOVxTF3wYmH4uH3dCLlOoPpDNUffCipLEknaNghNeV-OtIFstk0Z1zy4kLQoZENCfHlq7hTB8E-BtUSz64ReBz5njyBHgGSEhvVqx16xZhWX9FEM0XPUCWs6zoe_q6m43IyIqqkWf_5dMhm2c-CTTBPqrKYEgd_leFu0mWURIo2pOxW8XvAJ?purpose=fullsize)
+IMUPoser — sparse wearable sensing
 
-3\. IMUPoser
+Focuses on reconstructing full-body movement from a small number of IMUs, closer to practical wearable configurations.
 
-A useful option for investigating full-body pose reconstruction from a sparse arrangement of six IMUs.
+[Official research repository](https://github.com/FIGLAB/IMUPoser?utm_source=chatgpt.com)
 
-[Dataset and research code](https://github.com/FIGLAB/IMUPoser?utm_source=chatgpt.com)
+![精读AMASS论文解析MoSh++方法统一动捕数据集-开发者社区-阿里云](https://images.openai.com/static-rsc-4/ufQ8jw17NK_CYKbHAEIF8VGQjWejuGYB3j-0Qzvrrslk-8LpEVDETmjWWLRRTp-67o1qnb8MbW5A7pwMw193PyqukKjCdESH8SAR_GY0Y2FrhuFt2OJtkEMeiXjidbOOaFDDRF30-sHY20-Q18t-L1l1FuLO5yRhCiFJGH2wtR-KG64KkC8ncHeKobFe5QJe?purpose=fullsize)
 
-### What would you actually build?
+AMASS — large-scale 3D motion data
 
-### Wearable-to-3D Motion Reconstruction
+A collection of motion-capture datasets represented using a common SMPL-family body model. Excellent for pretraining and generating synthetic sensor inputs.
 
-Wearable sensor time series
+[Official dataset](https://amass.is.tue.mpg.de/?utm_source=chatgpt.com)
 
-Accelerometer + gyroscope + orientation
+AMASS primarily supplies motion-capture data, not measured IMU signals for every sequence.
 
-Temporal ML model
+### 2\. Research papers to read
 
-1D CNN / TCN / LSTM / Transformer
+Read these in order, from the foundational problem to more advanced research directions.
 
-3D joint positions and rotations
+### 1\. Deep Inertial Poser (DIP), SIGGRAPH Asia 2018
 
-Predicted skeleton for every time step
+Start here · Foundational paper
 
-Animated 3D avatar
+Deep Inertial Poser: Learning to Reconstruct Human Pose from Sparse Inertial Measurements in Real Time
 
-Visualize the reconstructed activity in a 3D viewer
+Explains how to estimate full-body pose from sparse IMU signals with a learned temporal model.
 
-### Where is the research opportunity?
+[Paper, dataset, and project page](https://dip.is.tuebingen.mpg.de/?utm_source=chatgpt.com)
 
-Simply reproducing a 3D skeleton is already an established task. To make this a stronger research project, investigate one specific challenge:
+### 2\. 3D Human Pose Estimation from Sparse IMUs through Temporal Encoder and Regression Decoder
 
-* Sparse sensors: Can six or fewer IMUs reconstruct pose as accurately as a larger sensor setup?
+Architecture and temporal modeling
 
-* Sensor placement errors: Does the model still work when sensors are attached at slightly different angles or positions?
+Studies temporal encoding and hierarchical regression using human skeletal structure.
 
-* Unseen activities: Can it reconstruct movements not represented in training?
+[Full paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC10098669/?utm_source=chatgpt.com)
 
-* Long-term drift: Can you maintain stable global body movement over long sequences?
+### 3\. Fast Human Motion Reconstruction from Sparse IMUs Considering the Human Shape
 
-* Personalization: Can a model adapt to a new person's movement without extensive labeled data?
+Body shape and motion reconstruction
 
-Sensor placement and calibration are particularly important real-world challenges; errors in attachment can degrade motion reconstruction.
+Useful for investigating whether modeling body shape improves reconstructed motion.
 
-My recommendation: Start with DIP-IMU, reproduce a baseline, and build a 3D animation pipeline. Then investigate robustness to sensor-placement errors or unseen subjects. Evaluate pose accuracy using MPJPE and joint-angle error, and separately assess temporal smoothness and generalization.
+[Full paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC10948800/?utm_source=chatgpt.com)
 
-One important limitation: IMUs alone do not directly measure absolute position. They can estimate body pose and relative movement, but global translation and long-term drift require additional modeling or reference information.
+### 4\. Ultra Inertial Poser (2024)
 
-12
+Advanced · Drift reduction
 
-12
+Combines sparse IMUs with ultra-wideband ranging to improve position tracking and reduce motion jitter.
+
+[Paper](https://arxiv.org/abs/2404.19541?utm_source=chatgpt.com)
+
+### 5\. IMUCoCo (UIST 2025)
+
+Advanced · Flexible sensor placement
+
+Investigates pose estimation and activity recognition with more flexible IMU placement configurations.
+
+[Research code and checkpoints](https://github.com/cmusmashlab/IMUCoCo?utm_source=chatgpt.com)
+
+### 6\. Lightweight wearable IMU human pose estimation (2026)
+
+Recent research · Efficient deployment
+
+Explores knowledge distillation and lightweight architectures for low-latency pose estimation.
+
+[Open-access paper](https://www.nature.com/articles/s41598-026-41004-5?utm_source=chatgpt.com)
+
+### 3\. Open-source code you can run
+
+These repositories help bridge the gap between reading a paper and building a working reconstruction system.
+
+MobilePoser
+
+Full-body pose estimation and 3D translation from IMUs on mobile consumer devices. A useful reference for an end-to-end implementation.
+
+[GitHub repository](https://github.com/SPICExLAB/MobilePoser?utm_source=chatgpt.com)
+
+Sparse IMU design-space exploration
+
+An implementation exploring the trade-off between accuracy, sensor configurations, and efficiency.
+
+[GitHub repository](https://github.com/itiv-kit/dse-sparse-imu?utm_source=chatgpt.com)
+
+SMPL body model
+
+A parametric 3D human body representation that converts pose and shape parameters into a mesh. This is useful when you want a realistic avatar rather than only joint coordinates.
+
+[SMPL project](https://smpl.is.tue.mpg.de/?utm_source=chatgpt.com)
+
+### 4\. Tools for the 3D visualization pipeline
+
+![Creating an Avatar | MSquared Docs](https://images.openai.com/static-rsc-4/rIKf1iPONWwQb-4Zkz7yAv9tJRYkIc7MIAsNVbslNMzkUOuUnJYs1dSAumHbt1o19S4zNDdJ90rU0yHx2eXqdRc-YQP8G2uV3lNFfCU1lUt2VvuGo1qT9Y1TV9kqKQp5ydpaHtkDmSgKVOqwiTlwTdDJIvo0R7JPG5OL4I7fLAZu_969k0j9JF-B83wzFxoS?purpose=fullsize)
+
+Blender
+
+Use for rigging a human avatar, animating joint rotations, and exporting rendered motion sequences.
+
+[blender.org](https://www.blender.org/?utm_source=chatgpt.com)
+
+![WebGL Skeletal Animation](https://images.openai.com/static-rsc-4/wHenmUJ7TRjKf7bSVlQqZZznKe8jmjs7omdg2i0yb6Q2Yb3OStcsveJZF4tIPqYCHjW9hb6GZLV4AUE-r7u5D5Qa0CZqnOUXfY6D8y7LsezvWcTi2OBMtEEIhfgO-9QWeFq9ghrD2apoWdX54jfoVEAzzbntFuAtInZfqmOKxyEnEH1u3_AIKUUyRowVyP_p?purpose=fullsize)
+
+Three.js
+
+Use for building an interactive browser-based 3D viewer with joint controls, playback, and synchronized sensor plots.
+
+[threejs.org](https://threejs.org/?utm_source=chatgpt.com)
+
+![The story of SMPL. In the summer of 2014 I was the one… | by Naureen Mahmood | Meshcapade | Medium](https://images.openai.com/static-rsc-4/v8n9lhjbTbdJtt3VXIUu-JWEDMg0RNexwehBUdy1PGwl_yPp3DYXD0xCWBV-TFprXYdQXAtOTG4uMAequ5fbb2x8JZ_3O9HGN6cGXGEiSgG3BmdscjCP6AgJikGaqafFHBIWlyNiLjaTLIyn2DworkpexIj-z1MXgssAZ-iAc8lNM1xzVGfXOtpQMXUKR-3Q?purpose=fullsize)
+
+SMPL body models
+
+Useful for converting predicted skeletal poses into a consistent human mesh. Review model access and licensing before use.
+
+### 5\. A practical roadmap
+
+For your background, I would follow this sequence:
+
+* Reproduce DIP. Understand IMU orientation, acceleration, coordinate systems, and the pose output representation.
+
+* Build a 3D viewer. Animate predicted joint positions or rotations using Blender or Three.js.
+
+* Establish a subject-independent baseline. Make sure test subjects do not appear in training data.
+
+* Test sparse sensing. Compare different sensor subsets and quantify the accuracy lost when sensors are removed.
+
+* Investigate one research question. My preferred options are flexible sensor placement, unseen-activity generalization, or temporal stability and drift.
+
+For evaluation, track MPJPE (mean per-joint position error), joint-angle error, and temporal jerk. If you estimate global translation, evaluate trajectory drift separately. A smooth animation alone is not evidence of accurate reconstruction.
+
+Best starting combination: DIP-IMU + the DIP paper + MobilePoser + a Blender viewer. This gives you a full path from raw wearable signals to an animated 3D human, with a reproducible baseline for further research.
