@@ -1,0 +1,16 @@
+
+:root{--bg:#f6f8fb;--panel:#fff;--ink:#172033;--muted:#596579;--line:#dce3ed;--accent:#2457a7;--accent2:#eaf1fc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.68 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:#13233e;color:white;padding:28px 20px}header .wrap,main,footer .wrap{max-width:1000px;margin:auto}
+header h1{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2;margin:0 0 8px}header p{margin:0;color:#d8e3f5}
+main{padding:28px 20px 56px}article,.toc,.callout{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,32px);box-shadow:0 4px 18px rgba(24,45,78,.04)}
+h2{margin-top:1.8em;line-height:1.25}h2:first-child{margin-top:0}h3{margin-top:1.4em}p,li{max-width:85ch}a{color:var(--accent)}
+nav.pager{display:flex;justify-content:space-between;gap:12px;margin:22px 0;flex-wrap:wrap}nav.pager a,.button{display:inline-block;padding:10px 15px;border:1px solid var(--line);border-radius:9px;background:white;text-decoration:none;font-weight:650}
+nav.pager a:hover,.button:hover{background:var(--accent2)}ul,ol{padding-left:1.4rem}code{background:#eef2f7;padding:.12em .35em;border-radius:4px}
+pre{background:#101827;color:#e7edf7;padding:16px;border-radius:10px;overflow:auto;line-height:1.5}pre code{background:none;padding:0;color:inherit}
+.math{background:#f1f5fb;border-left:4px solid var(--accent);padding:12px 16px;margin:16px 0;overflow-x:auto;font-family:Georgia,serif}
+table{border-collapse:collapse;width:100%;margin:18px 0;font-size:.94rem}th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}th{background:#f0f4fa}
+.callout{margin:18px 0;background:#f8fbff;border-color:#cbdaf0}.callout strong{color:#173e78}.small{color:var(--muted);font-size:.92rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.lesson-card{background:white;border:1px solid var(--line);border-radius:12px;padding:17px;text-decoration:none;color:inherit}
+.lesson-card:hover{border-color:#8eacd9}.lesson-card strong{display:block;color:var(--accent);margin-bottom:5px}footer{padding:22px 20px;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:600px){body{font-size:15px}main{padding:16px 12px 40px}table{display:block;overflow-x:auto}}
